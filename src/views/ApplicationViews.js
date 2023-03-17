@@ -10,7 +10,9 @@ export const ApplicationViews = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route element={<Authorized />}>
-                <Route path="/" element={<FullList />} />
+
+                <Route path="/home" element={<FullList />} />
+
             </Route>
         </Routes>
     </>
