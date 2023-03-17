@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { getKnitProjects } from "../../managers/ProjectManager"
+import { getCrochetProjects } from "../../managers/ProjectManager"
 
-export const KnitList = (props) => {
+export const CrochetList = (props) => {
     const navigate = useNavigate()
 
     const [ projects, setProjects] = useState([])
 
     //set the projects array from useState equal to the projects being fetched by the manager
     useEffect(() => {
-        getKnitProjects().then(data => setProjects(data))
+        getCrochetProjects().then(data => setProjects(data))
     }, [])
 
 

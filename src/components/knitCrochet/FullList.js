@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { getProjects, getSingleProject } from "../../managers/ProjectManager"
+import { getProjects } from "../../managers/ProjectManager"
 
 export const FullList = (props) => {
     const navigate = useNavigate()
@@ -26,7 +26,6 @@ export const FullList = (props) => {
                 })
             
             }
-            <section>hello?</section>
         </article>
     
     )
