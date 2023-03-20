@@ -7,6 +7,7 @@ import { CrochetList } from "../components/knitCrochet/CrochetList"
 import { Authorized } from "./Authorized"
 import { ProjectForm } from "../components/projectForm/ProjectForm"
 import { ProjectEdit } from "../components/projectForm/ProjectEdit"
+import { ProjectSingle } from "../components/projectSingle/ProjectSingle"
 
 export const ApplicationViews = () => {
     return <>
@@ -22,7 +23,7 @@ export const ApplicationViews = () => {
 
                 {/* useParams */}
                 <Route path="/projectedit/:projectId" element={<ProjectEdit />} />
-                <Route path="/projectsingle/:projectId" element={<ProjectEdit />} />
+                <Route path="/projectsingle/:projectId" element={<ProjectSingle />} />
 
             </Route>
         </Routes>
