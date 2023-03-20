@@ -33,5 +33,38 @@ export const getCrochetProjects = () => {
 }
 
 //CREATE
+
+export const createProject = (project) => {
+    return fetch("http://localhost8000/projects", {
+        method: "POST",
+            headers: {
+                "Authorization": `Token ${localStorage.getItem("cc_token")}`,
+                "Content-Type": "application/json"
+            },
+        body: JSON.stringify(project)
+    }).then(response => response.json())
+}
+
 //UPDATE
+
+export const editProject = (project, id) => {
+    return fetch(`http://localhost:8000/projects/${id}`, { 
+        method: "PUT",
+            headers: {
+                "Authorization":`Token ${localStorage.getItem("cc_token")}`,
+                "Content-Type": "application/json"
+            },
+        body: JSON.stringify(project)
+    })
+}
+
 //DELETE
+
+export const deleteProject = (projectId) => {
+    return fetch(`http://localhost:8000/projects/${projectId}`,{ 
+        method: "DELETE",
+        headers: {
+            "Authorization":`Token ${localStorage.getItem("cc_token")}`,
+        },
+    })
+}
