@@ -32,10 +32,21 @@ export const getCrochetProjects = () => {
     }).then(response => response.json())
 }
 
-//CREATE
+//POST
 
 export const createProject = (project) => {
     return fetch("http://localhost8000/projects", {
+        method: "POST",
+            headers: {
+                "Authorization": `Token ${localStorage.getItem("cc_token")}`,
+                "Content-Type": "application/json"
+            },
+        body: JSON.stringify(project)
+    }).then(response => response.json())
+}
+
+export const addYarn = (project, projectId) => {
+    return fetch(`http://localhost8000/projects/${projectId}/addYarn`, {
         method: "POST",
             headers: {
                 "Authorization": `Token ${localStorage.getItem("cc_token")}`,

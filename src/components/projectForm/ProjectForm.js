@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { createProject } from "../../managers/ProjectManager";
+import { createProject, addYarn  } from "../../managers/ProjectManager";
+import { getYarns, createYarn} from "../../managers/YarnManager";
 
 export const ProjectForm = () => {
     const navigate = useNavigate()
+
     const [currentProject, setCurrentProject] = useState({
         project_type: "",
         name: "",
@@ -19,6 +21,19 @@ export const ProjectForm = () => {
         copy[event.target.name] = event.target.value
         setCurrentProject(copy)
     }
+
+    // const [existingYarns, setExistingYarns] = useState([])
+    // useEffect(() => {
+    //     getYarns().then((existingYarnsArr) => {setExistingYarns(existingYarnsArr)})
+    // }, [])
+
+    // const [yarnsArr, setYarnsArr] = useState([])
+
+    // const changeYarnsArrState = (yarn) => {
+    //     const copy = [...yarnsArr]
+    //     copy.push(yarn)
+    //     setYarnsArr(copy)
+    // }
 
     return (
         <form className="projectForm">
@@ -83,11 +98,10 @@ export const ProjectForm = () => {
             </fieldset>
 
             <fieldset>
-                {/*DIRECTIONS LINK*/}
                 <div className="form-group">
                     <label htmlFor="directions_link">Link to Directions: </label>
                     <input 
-                        type="url" name="url" className="form-control"
+                        type="text" name="directions_link" className="form-control"
                         required autoFocus
                         value={currentProject.directions_link}
                         onChange={changeProjectState}
@@ -106,6 +120,24 @@ export const ProjectForm = () => {
                         onChange={changeProjectState}
                     />
                 </div>
+            </fieldset>
+
+            <fieldset>
+                {/* YARNS LIST */}
+
+                {/*YARNS SELECT*/}
+                {/*existingYarns.map(yarn => {
+                            return <>
+                                <div>
+                                    <input type="radio" name="yarn" value={yarn.id} key={`yarn--${yarn.id}`}
+                                        onChange={changeYarnsArrState(yarn)}
+                                    /> {yarn.color}
+                                </div>
+                            </>
+                        })}*/}
+
+
+
             </fieldset>
 
 
