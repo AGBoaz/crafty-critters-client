@@ -103,7 +103,7 @@ export const ProjectForm = () => {
                     const project = {
                         project_type: currentProject.project_type,
                         name: currentProject.name,
-                        tool_size: parseInt(currentProject.description),
+                        tool_size: parseInt(currentProject.tool_size),
                         directions_link: currentProject.directions_link,
                         pattern_type: currentProject.pattern_type
                     }

@@ -19,10 +19,15 @@ export const FullList = (props) => {
                 projects.map(project => {
                     return <section key={`project--${project.id}`} className="project">
                         <div className="project--name">name: {project.name}</div>
+                        <div className="project--type">Type: {project.project_type}</div>
                         <div className="project--toolSize">tool size: {project.tool_size}</div>
                         <div className="project--photo">{project.photo}</div>
                         <div className="project--directions">directions: {project.directions_link}</div>
                         <div className="project--patternType">pattern: {project.pattern_type}</div>
+
+                        <button className="btn btn-1 btn-sep icon-create"
+                            onClick={() => {navigate({ pathname: `/projectsingle/${project.id}`})}}>view
+                        </button>
                     </section> 
                 })
             
