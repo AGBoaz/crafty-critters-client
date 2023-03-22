@@ -9,7 +9,6 @@ export const ProjectForm = () => {
         name: "",
         tool_size: 0,
         critter: 0,
-        photo: "",
         directions_link: "",
         pattern_type: ""
     })
@@ -31,14 +30,14 @@ export const ProjectForm = () => {
                     <div>
                         <input type="radio" name="project_type" id="knit" className="form-control"
                             required autoFocus
-                            value={currentProject.project_type}
+                            value={"knit"}
                             onChange={changeProjectState}
                         />knit
                     </div>
                     <div>
                         <input type="radio" name="project_type" id="crochet" className="form-control"
                             required autoFocus
-                            value={currentProject.project_type}
+                            value={"crochet"}
                             onChange={changeProjectState}
                         />crochet
                     </div>
@@ -70,24 +69,11 @@ export const ProjectForm = () => {
             </fieldset>
 
             <fieldset>
-                {/*PHOTO*/}
-                <div className="form-group">
-                    <label htmlFor="photo">Photo: </label>
-                    <input 
-                        type="image" id="image" alt="img not found" name="photo" className="form-control"
-                        required autoFocus
-                        value={currentProject.photo}
-                        onChange={changeProjectState}
-                    />
-                </div>
-            </fieldset>
-
-            <fieldset>
                 {/*DIRECTIONS LINK*/}
                 <div className="form-group">
                     <label htmlFor="directions_link">Link to Directions: </label>
                     <input 
-                        type="url" name="url" className="form-control"
+                        type="text" name="directions_link" className="form-control"
                         required autoFocus
                         value={currentProject.directions_link}
                         onChange={changeProjectState}
@@ -115,10 +101,9 @@ export const ProjectForm = () => {
                     evt.preventDefault()
 
                     const project = {
-                        project_type: currentProject.gamer,
+                        project_type: currentProject.project_type,
                         name: currentProject.name,
                         tool_size: parseInt(currentProject.description),
-                        photo: currentProject.photo,
                         directions_link: currentProject.directions_link,
                         pattern_type: currentProject.pattern_type
                     }
