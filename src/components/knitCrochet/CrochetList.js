@@ -23,6 +23,10 @@ export const CrochetList = (props) => {
                         <div className="project--photo">{project.photo}</div>
                         <div className="project--directions">directions: {project.directions_link}</div>
                         <div className="project--patternType">pattern: {project.pattern_type}</div>
+
+                        <button className="btn btn-1 btn-sep icon-create"
+                            onClick={() => {navigate({ pathname: `/projectsingle/${project.id}`})}}>view
+                        </button>
                     </section> 
                 })
             

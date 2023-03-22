@@ -35,8 +35,10 @@ export const MyProjects = (props) => {
                         </button>
                     </section> 
                 })
-            
             }
+            <button className="btn btn-1 btn-sep icon-create"
+                onClick={() => {navigate({ pathname: `/projectform`})}}>New
+            </button>
         </article>
     
     )
