@@ -8,8 +8,8 @@ export const Register = () => {
     //create variables for all the information needed from the user
     const firstName = useRef()
     const lastName = useRef()
+    const email = useRef()
     const username = useRef()
-    const bio = useRef()
     const password = useRef()
     const verifyPassword = useRef()
     const passwordDialog = useRef()
@@ -21,10 +21,10 @@ export const Register = () => {
         //if the user verified their password successfully, then create a newUser object
         if (password.current.value === verifyPassword.current.value) {
             const newUser = {
+                "email": email.current.value,
                 "username": username.current.value,
                 "first_name": firstName.current.value,
                 "last_name": lastName.current.value,
-                "bio": bio.current.value,
                 "password": password.current.value
             }
 
@@ -60,6 +60,10 @@ return (
                     <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="inputEmail">Email</label>
+                    <input ref={email} type="text" name="email" className="form-control" placeholder="Email" required />
+                </fieldset>
+                <fieldset>
                     <label htmlFor="inputUsername">Username</label>
                     <input ref={username} type="text" name="username" className="form-control" placeholder="Username" required />
                 </fieldset>
@@ -70,10 +74,6 @@ return (
                 <fieldset>
                     <label htmlFor="verifyPassword"> Verify Password </label>
                     <input ref={verifyPassword} type="password" name="verifyPassword" className="form-control" placeholder="Verify password" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="verifyPassword"> Verify Password </label>
-                    <textarea ref={bio} name="bio" className="form-control" placeholder="Let others know a little bit about you..." />
                 </fieldset>
                 <fieldset style={{
                     textAlign: "center"
