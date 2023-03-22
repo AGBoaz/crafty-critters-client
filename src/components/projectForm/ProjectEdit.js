@@ -11,7 +11,6 @@ export const ProjectEdit = () => {
         name: "",
         tool_size: 0,
         critter: 0,
-        photo: "",
         directions_link: "",
         pattern_type: ""
     })
@@ -38,14 +37,14 @@ export const ProjectEdit = () => {
                     <div>
                         <input type="radio" name="project_type" id="knit" className="form-control"
                             required autoFocus
-                            value={currentProject.project_type}
+                            value={"knit"}
                             onChange={changeProjectState}
                         />knit
                     </div>
                     <div>
                         <input type="radio" name="project_type" id="crochet" className="form-control"
                             required autoFocus
-                            value={currentProject.project_type}
+                            value={"crochet"}
                             onChange={changeProjectState}
                         />crochet
                     </div>
@@ -71,19 +70,6 @@ export const ProjectEdit = () => {
                     <label htmlFor="tool_size">Tool Size: </label>
                     <input type="number" step="0.01" name="tool_size" required className="form-control"
                         value={currentProject.tool_size}
-                        onChange={changeProjectState}
-                    />
-                </div>
-            </fieldset>
-
-            <fieldset>
-                {/*PHOTO*/}
-                <div className="form-group">
-                    <label htmlFor="photo">Photo: </label>
-                    <input 
-                        type="image" id="image" alt="img not found" name="photo" className="form-control"
-                        required autoFocus
-                        value={currentProject.photo}
                         onChange={changeProjectState}
                     />
                 </div>
@@ -122,10 +108,9 @@ export const ProjectEdit = () => {
                     evt.preventDefault()
 
                     const project = {
-                        project_type: currentProject.gamer,
+                        project_type: currentProject.project_type,
                         name: currentProject.name,
                         tool_size: parseInt(currentProject.description),
-                        photo: currentProject.photo,
                         directions_link: currentProject.directions_link,
                         pattern_type: currentProject.pattern_type
                     }
