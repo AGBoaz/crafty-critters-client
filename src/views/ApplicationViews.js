@@ -9,6 +9,7 @@ import { ProjectForm } from "../components/projectForm/ProjectForm"
 import { ProjectEdit } from "../components/projectForm/ProjectEdit"
 import { ProjectSingle } from "../components/projectSingle/ProjectSingle"
 import { MyProjects } from "../components/myProjects/MyProjects"
+import { Profile } from "../components/profile/Profile"
 
 export const ApplicationViews = () => {
     return <>
@@ -22,6 +23,7 @@ export const ApplicationViews = () => {
                 <Route path="/crochet" element={<CrochetList />} />
                 <Route path="/projectform" element={<ProjectForm />} />
                 <Route path="/mine" element={<MyProjects />} />
+                <Route path="/profile" element={<Profile />} />
 
                 {/* useParams */}
                 <Route path="/projectedit/:projectId" element={<ProjectEdit />} />

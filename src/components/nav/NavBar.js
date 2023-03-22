@@ -12,7 +12,10 @@ export const NavBar = () => {
                 <Link className="nav-link" to="/crochet">Crochet</Link>
             </li>
             <li className="navbar__item">
-                <Link className="nav-link" to="/home">home</Link>
+                <Link className="nav-link" to="/home">Home</Link>
+            </li>
+            <li className="navbar__item">
+                <Link className="nav-link" to="/profile">Profile</Link>
             </li>
             {
                 (localStorage.getItem("cc_token") !== null) ?

@@ -10,7 +10,7 @@ export const MyProjects = (props) => {
     //set the projects array from useState equal to the projects being fetched by the manager
     //What is the easiest way to get the Id of the current user?
     useEffect(() => {
-        getCritterProjects(1).then(data => setProjects(data))
+        getCritterProjects().then(data => setProjects(data))
     }, [])
 
     const handleDelete = (projectId) => {

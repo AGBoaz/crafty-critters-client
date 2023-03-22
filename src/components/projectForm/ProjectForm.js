@@ -20,6 +20,7 @@ export const ProjectForm = () => {
         setCurrentProject(copy)
     }
 
+
     return (
         <form className="projectForm">
             <h2 className="projectForm__title">Create A New Project</h2>
@@ -70,24 +71,11 @@ export const ProjectForm = () => {
             </fieldset>
 
             <fieldset>
-                {/*PHOTO*/}
-                <div className="form-group">
-                    <label htmlFor="photo">Photo: </label>
-                    <input 
-                        type="image" id="image" alt="img not found" name="photo" className="form-control"
-                        required autoFocus
-                        value={currentProject.photo}
-                        onChange={changeProjectState}
-                    />
-                </div>
-            </fieldset>
-
-            <fieldset>
                 {/*DIRECTIONS LINK*/}
                 <div className="form-group">
-                    <label htmlFor="directions_link">Link to Directions: </label>
+                    <label htmlFor="directions_link">Directions Link: </label>
                     <input 
-                        type="url" name="url" className="form-control"
+                        type="text" name="directions_link" className="form-control"
                         required autoFocus
                         value={currentProject.directions_link}
                         onChange={changeProjectState}
@@ -118,7 +106,6 @@ export const ProjectForm = () => {
                         project_type: currentProject.gamer,
                         name: currentProject.name,
                         tool_size: parseInt(currentProject.description),
-                        photo: currentProject.photo,
                         directions_link: currentProject.directions_link,
                         pattern_type: currentProject.pattern_type
                     }

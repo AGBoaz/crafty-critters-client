@@ -32,8 +32,8 @@ export const getCrochetProjects = () => {
     }).then(response => response.json())
 }
 
-export const getCritterProjects = (critterId) => {
-    return fetch(`http://localhost:8000/projects?critter=${critterId}`, {
+export const getCritterProjects = () => {
+    return fetch(`http://localhost:8000/projects?critter=yes`, {
         headers: {
             "Authorization":`Token ${localStorage.getItem("cc_token")}`
         }
@@ -43,7 +43,7 @@ export const getCritterProjects = (critterId) => {
 //CREATE
 
 export const createProject = (project) => {
-    return fetch("http://localhost8000/projects", {
+    return fetch("http://localhost:8000/projects", {
         method: "POST",
             headers: {
                 "Authorization": `Token ${localStorage.getItem("cc_token")}`,
