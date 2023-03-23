@@ -30,12 +30,13 @@ export const ProjectSingle = () => {
     }, [projectId])
 
     return (
-        <article className="project">
-            <div className="project--name">{currentProject.name}</div>
-            <div className="project--toolSize">{currentProject.tool_size}</div>
-            <div className="project--toolSize">{currentProject.photo}</div>
-            <div className="project--directions">{currentProject.directions_link}</div>
-            <div className="project--patternType">{currentProject.pattern_type}</div>
+        <article className="projects project">
+            <div className="projectTextContainer">
+                <div className="project--name">Name: {currentProject.name}</div>
+                <div className="project--toolSize">Tool Size: {currentProject.tool_size}</div>
+                <div className="project--directions">Directions: {currentProject.directions_link}</div>
+                <div className="project--patternType">Pattern: {currentProject.pattern_type}</div>
+            </div>
         </article>
     )
 

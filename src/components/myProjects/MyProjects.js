@@ -20,13 +20,16 @@ export const MyProjects = (props) => {
             {
                 projects.map(project => {
                     return <section key={`project--${project.id}`} className="project">
-                        <div className="project--name">name: {project.name}</div>
-                        <div className="project--toolSize">hook: {project.tool_size}</div>
-                        <div className="project--photo">{project.photo}</div>
-                        <div className="project--directions">directions: {project.directions_link}</div>
-                        <div className="project--patternType">pattern: {project.pattern_type}</div>
+                        <div className="projectTextContainer">
+                            <div className="project--name">Name: {project.name}</div>
+                            <div className="project--type">Type: {project.project_type}</div>
+                            <div className="project--toolSize">Tool: {project.tool_size}</div>
+                            <div className="project--photo">{project.photo}</div>
+                            <div className="project--directions">Directions: {project.directions_link}</div>
+                            <div className="project--patternType">Pattern: {project.pattern_type}</div>
+                        </div>
 
-                        <button className="btn btn-1 btn-sep icon-create"
+                        <button className="btn btn-4 btn-sep icon-create"
                             onClick={() => {navigate({ pathname: `/projectedit/${project.id}`})}}>Edit
                         </button>
 
@@ -36,9 +39,11 @@ export const MyProjects = (props) => {
                     </section> 
                 })
             }
-            <button className="btn btn-1 btn-sep icon-create"
-                onClick={() => {navigate({ pathname: `/projectform`})}}>New
-            </button>
+            <div className="newBtnContainer">
+                <button className="btn btn-1 btn-sep icon-create"
+                    onClick={() => {navigate({ pathname: `/projectform`})}}>New
+                </button>
+            </div>
         </article>
     
     )

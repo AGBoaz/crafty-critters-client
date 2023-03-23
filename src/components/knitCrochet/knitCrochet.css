@@ -1,0 +1,29 @@
+.projectTextContainer{
+    display:flex;
+    column-gap: 2rem;
+    color: rgb(60, 59, 67);
+    font-size: 1.1rem;
+}
+.project{
+    background-color: rgb(146, 216, 198);
+    border-radius: 2rem;
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.projects{
+
+    display:flex;
+    flex-flow: row wrap;
+    row-gap: 1rem;
+    padding: 3rem;
+    
+}
+
+.newBtnContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
