@@ -7,6 +7,8 @@
 .project{
     background-color: rgb(146, 216, 198);
     border-radius: 2rem;
+    width: 100vw;
+    padding: 2rem;
 
     display:flex;
     justify-content: space-around;

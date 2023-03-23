@@ -1,36 +1,43 @@
-.navbar {
+.navbar{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: left;
-    background-color: rgb(146, 216, 198);
-    padding: 40px;
+    justify-content: center;
+    background-color: rgb(146, 216, 198)
+}
+
+.nav-item {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     column-gap: 1rem;
-
-
 }
 
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
     background-color: rgb(179, 233, 219);
-    padding: 2rem;
     border-radius: 1rem;
-}
 
-.project{
-    background-color: rgb(146, 216, 198);
-    color: rgb(64, 64, 221);
-    width: 100vw;
-    padding: 40px;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 11rem;
+    padding-right: 11rem;
 }
 
 .nav-link{
     display:flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
 
     color:rgb(255, 255, 255);
     font-family: "Patua One", serif;
     text-decoration: none;
     font-size: 2rem;
+}
+
+.loginRegisterContainer{
+    display:flex;
+    column-gap: 4rem;
 }
