@@ -13,14 +13,14 @@ textarea {
   line-height: 1.5;
 }
 body {
-    padding: 0 3rem;
+    padding: 0 0rem;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 0em;
 }
 .title--main {
   margin-block-end: 0;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createProject } from "../../managers/ProjectManager";
+import "./ProjectForm.css"
 
 export const ProjectForm = () => {
     const navigate = useNavigate()
@@ -20,6 +21,7 @@ export const ProjectForm = () => {
     }
 
     return (
+        <article className="formContainer">
         <form className="projectForm">
             <h2 className="projectForm__title">Create A New Project</h2>
 
@@ -95,7 +97,7 @@ export const ProjectForm = () => {
             </fieldset>
 
 
-            <button type="submit"
+            <button type="submit" 
                 onClick={evt => {
                     // Prevent form from being submitted
                     evt.preventDefault()
@@ -110,9 +112,10 @@ export const ProjectForm = () => {
 
                     // Send POST request to your API
                     createProject(project)
-                        .then(() => navigate("/home"))
+                        .then(() => navigate("/mine"))
                 }}
-                className="btn btn-primary">Create</button>
+                className="btn btn-4 btn-sep icon-create">Create</button>
         </form>
+        </article>
     )
 }

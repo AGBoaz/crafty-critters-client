@@ -1,0 +1,27 @@
+.form-group{
+    background-color: rgb(179, 233, 219);
+    padding: 2rem;
+    width: 100%;
+
+    display:flex;
+    justify-content: left;
+    column-gap: 2rem;
+
+}
+
+.projectForm{
+    background-color: rgb(146, 216, 198);
+    padding: 4rem;
+    border-radius: 1rem;
+
+    display:flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContainer{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+

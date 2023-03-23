@@ -80,7 +80,7 @@ export const ProjectEdit = () => {
                 <div className="form-group">
                     <label htmlFor="directions_link">Link to Directions: </label>
                     <input 
-                        type="url" name="url" className="form-control"
+                        type="text" name="directions_link" className="form-control"
                         required autoFocus
                         value={currentProject.directions_link}
                         onChange={changeProjectState}
@@ -119,7 +119,7 @@ export const ProjectEdit = () => {
                     editProject(project, projectId)
                         .then(() => navigate("/home"))
                 }}
-                className="btn btn-primary">Done</button>
+                className="btn btn-1 btn-sep icon-create">Done</button>
         </form>
     )
 
